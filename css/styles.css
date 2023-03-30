@@ -1,0 +1,273 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	background-color: #294359;
+	margin: 0;
+	padding: 0;
+}
+
+/* Section */
+section {
+  margin: 4rem 1rem 0rem 1rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+section h1 {
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  margin-bottom: 2rem;
+	font-size: 3rem;
+	color: #294359;
+}
+
+.section-bg-gray {
+  background-color: rgba(226, 226, 226, 0.747);
+}
+
+.section-bg-gray2 {
+  background-color: rgba(240, 240, 240, 0.527);
+}
+
+/* Body splash */
+#splash {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #28435a;
+	color: white;
+	transition: opacity 2s ease-out;
+}
+
+#splash.hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* Navbar */
+.navbar-fixed {
+  display: none;
+}
+
+/* Home */
+#section1 {
+    color:white;
+    padding: 5rem 0rem 5rem 0rem;
+    margin: 0rem 0rem 0rem 0rem;
+    border-radius: 0px;
+}
+
+/* About me */
+#section2 .aboutme p {
+  color: #4c4c4c;
+}
+
+#section2 .aboutimg {
+  filter: grayscale(90%);
+  transition: 2S;
+}
+
+#section2 .aboutimg:hover {
+  filter: grayscale(0%);
+  box-shadow: rgba(0, 0, 0, 0.589) 0px 0px 10px;
+  transition: 2S;
+}
+
+#section2 .habilidades p {
+  text-align: right;
+}
+
+#section2 #barra {
+  transition: 5s;
+}
+
+#section2 #barra:hover {
+  background-color: rgb(127, 177, 127);
+  transition: 1s;
+}
+
+
+/* Portfolio */
+.gallery-wrapper {
+	display: flex;
+}
+
+.gallery-item {
+	position: relative;
+	isolation: isolate;
+	display: flex;
+	flex: 1;
+	height: 500px;
+	background-color: #000;
+	padding: 25px;
+	opacity: 1;
+	overflow: hidden;
+	transition: flex 0.5s, opacity 0.25s;
+}
+
+.gallery-item:hover {
+	opacity: 1;
+	flex: 5;
+}
+.gallery-item:not(:hover) {
+	opacity: 0.75;
+}
+
+.item-image {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.item-description {
+	align-self: flex-end;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.name {
+	font-size: 37px;
+	background: linear-gradient(90deg, #f32d5b, #ff009b);
+	padding-inline: 10px;
+	transform: translateY(-10px);
+}
+.role {
+	display: inline-block;
+	background: linear-gradient(90deg, #4136d9, #0086c7);
+	padding: 10px;
+	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+	transform: translateY(10px);
+}
+.name,
+.role {
+	opacity: 0;
+	transition: opacity 0.25s, transform 0.3s;
+	transition-delay: 0.35s;
+}
+.gallery-item:hover .name,
+.gallery-item:hover .role {
+	opacity: 1;
+	transform: translateY(0);
+}
+.gallery-item:not(:hover) .name,
+.gallery-item:not(:hover) .role {
+	transition-delay: 0s;
+}
+@media screen and (max-width: 768px) {
+	.gallery-wrapper {
+		flex-direction: column;
+		height: 100vh;
+	}
+
+	.gallery-item:hover {
+		flex-basis: 100%;
+	}
+}
+
+/* Services */
+#section4 .container {
+	margin-block-end: 1rem;
+	width: 100%;
+}
+
+.image-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0,0,0,0.3);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.overlay p {
+  font-size: 1rem;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+/* Contact */
+#section6 {
+  color:white;
+}
+
+#section6 h2 {
+  color:white;
+}
+
+#section6 ul li {
+  list-style:none
+}
+
+i {
+  cursor: pointer;
+  color: rgb(194, 194, 194);
+}
+
+i:hover {
+	animation: shake 0.25s;
+  color: white;
+}
+
+@keyframes shake {
+  10% {
+		transform: rotate(15deg);
+	}
+	20% {
+		transform: rotate(-15deg);
+	}
+	30% {
+		transform: rotate(15deg);
+	}
+	40% {
+		transform: rotate(-15deg);
+	}
+}
+
+.col-md-3 {
+  background-color: #c4d4e3;
+  width: 25%;
+  float: left;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: small;
+  margin-top: 1rem;
+  padding: 1rem 0px 0.5rem 0px;
+}
+
